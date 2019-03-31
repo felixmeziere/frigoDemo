@@ -142,7 +142,8 @@ platform :ios do
       owner_name: ENV['APPCENTER_USERNAME'],
       app_name: ENV['IOS_APPCENTER_APP_ID'],
       ipa: ENV['IOS_IPA_PATH'],
-      release_notes: %x[#{release_notes_command}]
+      release_notes: %x[#{release_notes_command}],
+      group: "Testers"
     )
   end
 
@@ -253,7 +254,8 @@ platform :android do
       owner_name: ENV['APPCENTER_USERNAME'],
       app_name: ENV['ANDROID_APPCENTER_APP_ID'],
       apk: ENV['ANDROID_APK_PATH'],
-      release_notes: %x[#{release_notes_command}]
+      release_notes: %x[#{release_notes_command}],
+      group: "Testers"
     )
   end
 
