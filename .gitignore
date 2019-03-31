@@ -60,3 +60,7 @@ dist
 fastlane/report.xml
 fastlane/.env.*.secret
 *.back
+
+# Jest
+#
+.jest/
