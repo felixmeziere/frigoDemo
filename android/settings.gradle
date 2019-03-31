@@ -1,0 +1,3 @@
+rootProject.name = 'frigoDemo'
+
+include ':app'
