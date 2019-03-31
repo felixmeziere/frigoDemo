@@ -10,7 +10,7 @@ import codePush from 'react-native-code-push';
 const codePushOptions = {
   checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
   installMode: codePush.InstallMode.ON_NEXT_SUSPEND,
-  minimumBackgroundDuration: 60,
+  minimumBackgroundDuration: 0,
 };
 const CodePushedApp = codePush(codePushOptions)(App);
 
