@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "App": ["src/App"],
+      "components": ["src/components"],
+      "redux/app": ["src/redux/app"],
+      "redux/types": ["src/redux/types"]
+    }
+  }
+}
