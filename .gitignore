@@ -54,3 +54,9 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+# Fastlane
+dist
+fastlane/report.xml
+fastlane/.env.*.secret
+*.back
