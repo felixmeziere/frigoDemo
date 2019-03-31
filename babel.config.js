@@ -19,6 +19,8 @@ module.exports = {
           components: './src/components',
           environment: './src/environment',
           'redux/app': './src/redux/app',
+          'redux/types': './src/redux/types',
+          services: './src/services',
         },
       },
     ],

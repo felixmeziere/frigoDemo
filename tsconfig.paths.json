@@ -3,9 +3,16 @@
     "baseUrl": ".",
     "paths": {
       "App": ["src/App"],
+      "environment": ["src/environment"],
       "components": ["src/components"],
       "redux/app": ["src/redux/app"],
-      "redux/types": ["src/redux/types"]
+      "redux/types": ["src/redux/types"],
+      "services": ["src/services"],
+      "environment/*": ["src/environment/*"],
+      "components/*": ["src/components/*"],
+      "redux/app/*": ["src/redux/app/*"],
+      "redux/types/*": ["src/redux/types/*"],
+      "services/*": ["src/services/*"]
     }
   }
 }
