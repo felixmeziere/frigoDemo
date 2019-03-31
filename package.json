@@ -6,15 +6,20 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "lint": "eslint .",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "postinstall": "rndebugger-open"
   },
   "dependencies": {
+    "@types/react-redux": "^7.0.6",
     "appcenter": "^1.13.0",
     "appcenter-analytics": "^1.13.0",
     "appcenter-crashes": "^1.13.0",
     "react": "16.8.3",
     "react-native": "0.59.2",
-    "react-native-code-push": "^5.6.0"
+    "react-native-code-push": "^5.6.0",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "typesafe-actions": "^3.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
@@ -29,8 +34,12 @@
     "jest": "^24.5.0",
     "metro-react-native-babel-preset": "^0.53.1",
     "prettier": "^1.16.4",
+    "react-addons-test-utils": "^15.6.2",
+    "react-native-debugger-open": "^0.3.19",
     "react-native-typescript-transformer": "^1.2.12",
     "react-test-renderer": "16.8.3",
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-extension": "^2.13.8",
     "ts-jest": "^24.0.1",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",

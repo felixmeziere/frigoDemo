@@ -5,6 +5,8 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import configureStore from './redux/configureStore';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -15,14 +17,18 @@ const instructions = Platform.select({
 
 type Props = {};
 
+export const store = configureStore();
+
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome Vilvaki!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Text style={styles.welcome}>Welcome Vilvaki!</Text>
+          <Text style={styles.instructions}>To get started, edit App.js</Text>
+          <Text style={styles.instructions}>{instructions}</Text>
+        </View>
+      </Provider>
     );
   }
 }
