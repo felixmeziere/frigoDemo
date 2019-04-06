@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/react-redux": "^7.0.6",
     "@types/redux-saga": "^0.10.5",
-    "@types/styled-components": "^4.1.12",
+    "@types/styled-components": "^4.1.13",
     "appcenter": "^1.13.0",
     "appcenter-analytics": "^1.13.0",
     "appcenter-crashes": "^1.13.0",
@@ -54,7 +54,7 @@
     "tslint": "^5.15.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.4.1"
+    "typescript": "^3.5.0-dev.20190406"
   },
   "jest": {
     "preset": "react-native",

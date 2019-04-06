@@ -41,7 +41,7 @@ const pickerSelectStyles = StyleSheet.create({
     fontSize: 16,
     paddingHorizontal: 10,
     paddingRight: 30, // to ensure the text is never behind the icon
-    paddingVertical: 12,
+    paddingVertical: 'sds',
   },
 });
 
