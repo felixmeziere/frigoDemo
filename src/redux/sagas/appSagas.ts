@@ -1,6 +1,6 @@
-import { takeEvery, put } from 'redux-saga/effects';
+import { put, takeEvery } from 'redux-saga/effects';
 import { call } from 'redux-saga/effects';
-import { init, getSpreadsheetDataSuccess } from 'redux/app';
+import { getSpreadsheetDataSuccess, init } from 'redux/app';
 import { formatSpreadsheetData } from 'services';
 import { getType } from 'typesafe-actions';
 import { getWholeSheet1 } from './helpers';

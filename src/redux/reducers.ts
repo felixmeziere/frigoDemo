@@ -6,7 +6,7 @@
 import { combineReducers, Reducer } from 'redux';
 
 import { reducer as appReducer } from './app';
-import { ReduxState, Action } from './types';
+import { Action, ReduxState } from './types';
 
 /**
  * Creates the main reducer with the asynchronously loaded ones

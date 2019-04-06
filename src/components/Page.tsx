@@ -4,8 +4,8 @@
  */
 
 import React, { ReactNode } from 'react';
-import styled from 'styled-components/native';
 import { StyleProp } from 'react-native';
+import styled from 'styled-components/native';
 
 interface Props {
   children: ReactNode;
@@ -14,6 +14,8 @@ interface Props {
 
 const PageContainer = styled.View`
   margin-top: 40;
+  flex: 1;
+  padding-horizontal: 10;
 `;
 
 export default (props: Props) => (

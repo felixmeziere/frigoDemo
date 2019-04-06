@@ -14,7 +14,7 @@ interface Props {}
 export const store = configureStore();
 
 export default class App extends Component<Props> {
-  render() {
+  public render() {
     return (
       <Provider store={store}>
         <Welcome />

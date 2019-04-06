@@ -1,55 +1,54 @@
+import { Input, Page } from 'components';
+import { Component, default as React } from 'react';
 /**
  *
  * @format
  */
-
-import React, { Component } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import RNPickerSelect from 'react-native-picker-select';
+import { connect } from 'react-redux';
 import {
   getFormattedSpreadsheetData,
-  setFormFieldValue,
   getFormFieldValues,
+  setFormFieldValue,
 } from 'redux/app';
-import { ReduxState } from 'redux/types';
-import { connect } from 'react-redux';
-import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
-import { Page, Input } from 'components';
 import { FormFieldValues } from 'redux/app/reducer';
-import RNPickerSelect from 'react-native-picker-select';
+import { ReduxState } from 'redux/types';
+import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
 
-interface Props {
+interface IProps {
   formattedSpreadsheetData: FormattedSpreadsheetData | null;
   formFieldValues: FormFieldValues;
   setFormFieldValue: typeof setFormFieldValue;
 }
 
 const pickerSelectStyles = StyleSheet.create({
-  inputIOS: {
-    fontSize: 16,
-    paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    // borderColor: 'gray',
-    borderRadius: 4,
-    color: 'black',
-    paddingRight: 30, // to ensure the text is never behind the icon
-  },
   inputAndroid: {
+    borderRadius: 8,
+    borderWidth: 0.5,
     fontSize: 16,
     paddingHorizontal: 10,
     paddingVertical: 8,
-    borderWidth: 0.5,
     // borderColor: 'eggplant',
-    borderRadius: 8,
     color: 'black',
     paddingRight: 30, // to ensure the text is never behind the icon
   },
+  inputIOS: {
+    // borderColor: 'gray',
+    borderRadius: 4,
+    borderWidth: 1,
+    color: 'black',
+    fontSize: 16,
+    paddingHorizontal: 10,
+    paddingRight: 30, // to ensure the text is never behind the icon
+    paddingVertical: 12,
+  },
 });
 
-class Welcome extends Component<Props> {
-  render() {
+class Welcome extends Component<IProps> {
+  public render() {
     return (
-      <Page style={{ justifyContent: 'center', alignItems: 'center' }}>
+      <Page style={{}}>
         {this.props.formattedSpreadsheetData &&
           this.props.formattedSpreadsheetData.fields.map(field => {
             switch (field.type) {
@@ -58,7 +57,7 @@ class Welcome extends Component<Props> {
                   <View style={{ flex: 1 }} key={field.name}>
                     <Text>{field.name}</Text>
                     <Input
-                      onChangeText={text =>
+                      onChangeText={(text: string) =>
                         this.props.setFormFieldValue({
                           field: field.name,
                           value: text,
@@ -75,29 +74,29 @@ class Welcome extends Component<Props> {
               case 'choix':
                 return (
                   <View style={{ flex: 1 }} key={field.name}>
-                    <Text style={{ marginBottom: 60 }}>{field.name}</Text>
+                    <Text style={{}}>{field.name}</Text>
                     <RNPickerSelect
                       placeholder={{
+                        color: 'red',
                         label: `Choisissez votre ${field.name}`,
                         value: null,
-                        color: 'red',
                       }}
                       items={field.values.map(value => ({
-                        label: value,
-                        value: value,
                         color: 'orange',
+                        label: value,
+                        value,
                       }))}
                       onValueChange={value => {
                         this.props.setFormFieldValue({
                           field: field.name,
-                          value: value,
+                          value,
                         });
                       }}
                       style={{
                         ...pickerSelectStyles,
                         iconContainer: {
-                          top: 20,
                           right: 10,
+                          top: 20,
                         },
                       }}
                       value={this.props.formFieldValues[field.name]}
@@ -107,14 +106,14 @@ class Welcome extends Component<Props> {
                           <View
                             style={{
                               backgroundColor: 'transparent',
-                              borderTopWidth: 10,
-                              borderTopColor: 'gray',
-                              borderRightWidth: 10,
-                              borderRightColor: 'transparent',
-                              borderLeftWidth: 10,
                               borderLeftColor: 'transparent',
-                              width: 0,
+                              borderLeftWidth: 10,
+                              borderRightColor: 'transparent',
+                              borderRightWidth: 10,
+                              borderTopColor: 'gray',
+                              borderTopWidth: 10,
                               height: 0,
+                              width: 0,
                             }}
                           />
                         );

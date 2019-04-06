@@ -1,12 +1,12 @@
+import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
+import { getType } from 'typesafe-actions';
 import { Action } from '../types';
 import {
+  getSpreadsheetDataFailure,
   getSpreadsheetDataRequest,
   getSpreadsheetDataSuccess,
-  getSpreadsheetDataFailure,
   setFormFieldValue,
 } from './actions';
-import { getType } from 'typesafe-actions';
-import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
 
 export interface FormFieldValues {
   [key: string]: string | number;

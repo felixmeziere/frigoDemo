@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { call } from 'redux-saga/effects';
 import { SPREADSHEET_ID, SPREADSHEETS_API_KEY } from 'environment';
+import { call } from 'redux-saga/effects';
 
 const GOOGLE_SHEETS_BASE_URL = 'https://sheets.googleapis.com/v4/spreadsheets';
 

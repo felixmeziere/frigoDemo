@@ -1,6 +1,6 @@
+import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
 import { ActionType, createStandardAction } from 'typesafe-actions';
 import { AppState } from './reducer';
-import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
 
 export const init = createStandardAction('APP/INIT')<{}>();
 export const setAppField = createStandardAction('APP/SOME_ACTION')<{
