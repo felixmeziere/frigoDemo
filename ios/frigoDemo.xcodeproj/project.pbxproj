@@ -45,6 +45,7 @@
 		A4D63EF1C1D74AD59F7AF934 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DF4D80B8574D188D25B0F7 /* AppCenter-Config.plist */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		BB97552720744C9CBBB94BC5 /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0B3AEFD7EA4CF7B713EF55 /* libAppCenterReactNative.a */; };
+		C3D79F53225A351D00596B0A /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D79F50225A351500596B0A /* libRNGestureHandler.a */; };
 		CB8119BC17887B257180B0E2 /* libPods-frigoDemo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A58E6073989E6208D2DB309 /* libPods-frigoDemo-tvOSTests.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
@@ -361,6 +362,20 @@
 			remoteGlobalIDString = F886647B1F4ADB500036D01B;
 			remoteInfo = "CodePush-tvOS";
 		};
+		C3D79F4F225A351500596B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D79F4A225A351400596B0A /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		C3D79F51225A351500596B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D79F4A225A351400596B0A /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -406,6 +421,7 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		BBCCE3B3E2CF583BD1FD6DF7 /* Pods-frigoDemo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frigoDemo-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-frigoDemo-tvOSTests/Pods-frigoDemo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		C3C9877FCEE741059DFC61C5 /* libAppCenterReactNativeAnalytics.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeAnalytics.a; sourceTree = "<group>"; };
+		C3D79F4A225A351400596B0A /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		C9384B6EA73146E7BA18A625 /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 		CF7C41F253B14D344A04E9C1 /* Pods-frigoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frigoDemo.debug.xcconfig"; path = "Target Support Files/Pods-frigoDemo/Pods-frigoDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D532E4E550D9C924DE8116C7 /* Pods-frigoDemo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frigoDemo-tvOS.release.xcconfig"; path = "Target Support Files/Pods-frigoDemo-tvOS/Pods-frigoDemo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -430,6 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D79F53225A351D00596B0A /* libRNGestureHandler.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
@@ -648,6 +665,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C3D79F4A225A351400596B0A /* RNGestureHandler.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -754,6 +772,15 @@
 			children = (
 				C3A9CF382250CC5C00303C19 /* libCodePush.a */,
 				C3A9CF3A2250CC5C00303C19 /* libCodePush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3D79F4B225A351400596B0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3D79F50225A351500596B0A /* libRNGestureHandler.a */,
+				C3D79F52225A351500596B0A /* libRNGestureHandler-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -940,6 +967,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = C3D79F4B225A351400596B0A /* Products */;
+					ProjectRef = C3D79F4A225A351400596B0A /* RNGestureHandler.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1245,6 +1276,20 @@
 			fileType = archive.ar;
 			path = libCodePush.a;
 			remoteRef = C3A9CF392250CC5C00303C19 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D79F50225A351500596B0A /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = C3D79F4F225A351500596B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D79F52225A351500596B0A /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = C3D79F51225A351500596B0A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

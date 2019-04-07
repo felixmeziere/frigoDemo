@@ -21,6 +21,8 @@ module.exports = {
           'redux/app': './src/redux/app',
           'redux/types': './src/redux/types',
           services: './src/services',
+          navigation: './src/navigation',
+          screens: './src/screens',
         },
       },
     ],
