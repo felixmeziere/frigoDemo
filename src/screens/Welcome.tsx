@@ -4,24 +4,34 @@ import { Component, default as React } from 'react';
  *
  * @format
  */
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
+import {
+  NavigationProp,
+  NavigationState,
+  NavigationActions,
+} from 'react-navigation';
 import { connect } from 'react-redux';
 import {
   getFormattedSpreadsheetData,
   getFormFieldValues,
   setFormFieldValue,
+  updateAdvice,
 } from 'redux/app';
 import { FormFieldValues } from 'redux/app/reducer';
 import { ReduxState } from 'redux/types';
-import { WHITE, DARK_GREY } from 'services';
+import { DARK_GREY, WHITE } from 'services';
 import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
 import styled from 'styled-components/native';
 
 interface IProps {
-  formattedSpreadsheetData: FormattedSpreadsheetData | null;
+  formattedSpreadsheetFields: FormattedSpreadsheetData | null;
   formFieldValues: FormFieldValues;
   setFormFieldValue: typeof setFormFieldValue;
+  navigation: NavigationProp<NavigationState>;
+}
+interface IState {
+  submitButtonMessage: null | string;
 }
 
 const pickerSelectStyles = StyleSheet.create({
@@ -61,37 +71,51 @@ const FieldLabel = styled.Text`
   flex: 0.2;
 `;
 const NumberInput = styled(Input)`
-  flex: 1;
   color: ${WHITE};
   padding-horizontal: 10;
+  width: 80;
 `;
 const ButtonContainer = styled.View`
   flex: 1;
   justify-content: flex-end;
   padding-bottom: 32;
+  align-items: center;
 `;
 const SubmitButton = styled.TouchableHighlight`
   width: 100%;
   background-color: ${DARK_GREY};
   height: 40;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 const ButtonText = styled.Text`
   color: ${WHITE};
   font-size: 24;
 `;
+const SubmitButtonMessage = styled.Text`
+  color: red;
+  font-size: 20;
+  margin-bottom: 8;
+`;
+const FieldUnit = styled.Text`
+  color: ${WHITE};
+  margin-left: 12;
+`;
 
-class Welcome extends Component<IProps> {
+class Welcome extends Component<IProps, IState> {
+  public state: IState = {
+    submitButtonMessage: null,
+  };
+
   public render() {
     return (
-      <Page style={{}}>
+      <Page>
         <TitleContainer>
           <Title>Magic Frigo</Title>
         </TitleContainer>
 
-        {this.props.formattedSpreadsheetData &&
-          this.props.formattedSpreadsheetData.fields.map(field => {
+        {this.props.formattedSpreadsheetFields &&
+          this.props.formattedSpreadsheetFields.fields.map(field => {
             switch (field.type) {
               case 'interval':
                 return (
@@ -103,14 +127,15 @@ class Welcome extends Component<IProps> {
                     }}
                     key={field.name}
                   >
-                    <FieldLabel>{field.name}</FieldLabel>
+                    <FieldLabel>{`${field.name}`}</FieldLabel>
                     <NumberInput
                       onChangeText={(text: string) => {
-                        if (typeof Number(text) === 'number')
+                        if (!Number.isNaN(Number(text)) && text.length <= 3) {
                           this.props.setFormFieldValue({
                             field: field.name,
                             value: Number(text),
                           });
+                        }
                       }}
                       value={
                         this.props.formFieldValues[field.name]
@@ -118,6 +143,7 @@ class Welcome extends Component<IProps> {
                           : ''
                       }
                     />
+                    <FieldUnit>{field.unit ? `${field.unit}` : ''}</FieldUnit>
                   </View>
                 );
               case 'choix':
@@ -175,22 +201,43 @@ class Welcome extends Component<IProps> {
             }
           })}
         <ButtonContainer>
-          <SubmitButton>
+          <SubmitButtonMessage>
+            {this.state.submitButtonMessage && this.state.submitButtonMessage}
+          </SubmitButtonMessage>
+          <SubmitButton onPress={this.onPressSubmit}>
             <ButtonText>Voir les conseils</ButtonText>
           </SubmitButton>
         </ButtonContainer>
       </Page>
     );
   }
+
+  private onPressSubmit = () => {
+    let areAllFieldsCompleted =
+      this.props.formattedSpreadsheetFields &&
+      Object.keys(this.props.formFieldValues).length ===
+        this.props.formattedSpreadsheetFields.fields.length;
+    Object.values(this.props.formFieldValues).forEach(fieldLabel => {
+      if (!this.props.formFieldValues) areAllFieldsCompleted = false;
+    });
+    if (areAllFieldsCompleted) {
+      this.setState({ submitButtonMessage: null });
+      this.props.updateAdvice();
+      // @ts-ignore
+      this.props.navigation.navigate('Results');
+    } else
+      this.setState({ submitButtonMessage: 'Remplis tous les champs svp' });
+  };
 }
 
 const mapStateToProps = (state: ReduxState) => ({
   formFieldValues: getFormFieldValues(state),
-  formattedSpreadsheetData: getFormattedSpreadsheetData(state),
+  formattedSpreadsheetFields: getFormattedSpreadsheetData(state),
 });
 
 const mapDispatchToProps = {
   setFormFieldValue,
+  updateAdvice,
 };
 
 export default connect(

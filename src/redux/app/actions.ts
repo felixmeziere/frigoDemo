@@ -16,6 +16,7 @@ export const getSpreadsheetDataSuccess = createStandardAction(
 export const getSpreadsheetDataFailure = createStandardAction(
   'APP/GET_SPREADSHEET_DATA.FAILURE',
 )<{}>();
+export const updateAdvice = createStandardAction('APP/UPDATE_ADVICE')<{}>();
 export const setFormFieldValue = createStandardAction(
   'APP/SET_FORM_FIELD_VALUE',
 )<{ field: string; value: string | number }>();
@@ -27,4 +28,5 @@ export type AppAction = ActionType<
   | typeof getSpreadsheetDataSuccess
   | typeof getSpreadsheetDataFailure
   | typeof setFormFieldValue
+  | typeof updateAdvice
 >;

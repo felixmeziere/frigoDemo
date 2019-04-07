@@ -12,16 +12,16 @@ export interface GoogleApiResponse {
 }
 
 function* initSaga() {
-  // try {
-  const response: GoogleApiResponse = yield call(getWholeSheet1);
-  const formattedSpreadhseetData = yield call(
-    formatSpreadsheetData,
-    response.values,
-  );
-  yield put(getSpreadsheetDataSuccess(formattedSpreadhseetData));
-  // } catch (error) {
-  //   console.warn(error.response.data);
-  // }
+  try {
+    const response: GoogleApiResponse = yield call(getWholeSheet1);
+    const formattedSpreadhseetData = yield call(
+      formatSpreadsheetData,
+      response.values,
+    );
+    yield put(getSpreadsheetDataSuccess(formattedSpreadhseetData));
+  } catch (error) {
+    console.warn(error.response.data);
+  }
 }
 
 export default function*() {

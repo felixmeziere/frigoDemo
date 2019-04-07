@@ -21,9 +21,8 @@ success(){
 warn(){
   echo -e "⚠️  ${YELLOW}$1${NO_COLOR}"
 
-  if [ $DEV -eq 0 ] {
+  if [ $DEV -eq 0 ]
   then
-  }
     exit 1
   fi
 }
@@ -31,9 +30,8 @@ warn(){
 check_environment(){
   CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
-  if [ "$CURRENT_BRANCH" != "$APP_ENV" ] {
+  if [ "$CURRENT_BRANCH" != "$APP_ENV" ]
   then
-  }
     warn "Wrong branch, checkout $APP_ENV to deploy to $APP_ENV."
   else
     success "Deploying to $APP_ENV."

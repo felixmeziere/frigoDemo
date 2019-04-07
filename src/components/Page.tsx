@@ -2,22 +2,21 @@
  *
  * @format
  */
-
 import React, { ReactNode } from 'react';
 import { StyleProp } from 'react-native';
-import styled from 'styled-components/native';
 import { DARK_PAGE_BACKGROUND } from 'services';
+import styled from 'styled-components/native';
 
 interface IProps {
   children: ReactNode;
-  style: StyleProp<{}>;
+  style?: StyleProp<{}>;
 }
 
 const PageContainer = styled.View`
-  padding-top: 20;
+  background-color: ${DARK_PAGE_BACKGROUND};
   flex: 1;
   padding-horizontal: 16;
-  background-color: ${DARK_PAGE_BACKGROUND};
+  padding-top: 20;
 `;
 
 export default (props: IProps) => (

@@ -1,3 +1,4 @@
+import { getAdviceFromFields } from 'services';
 import { FormattedSpreadsheetData } from 'services/formatSpreadsheetData';
 import { getType } from 'typesafe-actions';
 import { Action } from '../types';
@@ -6,6 +7,7 @@ import {
   getSpreadsheetDataRequest,
   getSpreadsheetDataSuccess,
   setFormFieldValue,
+  updateAdvice,
 } from './actions';
 
 export interface FormFieldValues {
@@ -13,13 +15,15 @@ export interface FormFieldValues {
 }
 
 export interface AppState {
-  formattedSpreadsheetData: FormattedSpreadsheetData | null;
+  formattedSpreadsheetFields: FormattedSpreadsheetData | null;
   formFieldValues: FormFieldValues;
+  advice: null | string[];
 }
 
 const initialState = {
+  advice: null,
   formFieldValues: {},
-  formattedSpreadsheetData: null,
+  formattedSpreadsheetFields: null,
 };
 
 export default (state: AppState = initialState, action: Action): AppState => {
@@ -27,16 +31,25 @@ export default (state: AppState = initialState, action: Action): AppState => {
     case getType(getSpreadsheetDataRequest):
       return state;
     case getType(getSpreadsheetDataSuccess):
-      return { ...state, formattedSpreadsheetData: action.payload };
+      return { ...state, formattedSpreadsheetFields: action.payload };
     case getType(getSpreadsheetDataFailure):
       return state;
-    case getType(setFormFieldValue):
+    case getType(updateAdvice):
       return {
         ...state,
-        formFieldValues: {
-          ...state.formFieldValues,
-          [action.payload.field]: action.payload.value,
-        },
+        advice: getAdviceFromFields(
+          state.formattedSpreadsheetFields,
+          state.formFieldValues,
+        ),
+      };
+    case getType(setFormFieldValue):
+      const newFormFieldValues = {
+        ...state.formFieldValues,
+        [action.payload.field]: action.payload.value,
+      };
+      return {
+        ...state,
+        formFieldValues: newFormFieldValues,
       };
     default:
       return state;
