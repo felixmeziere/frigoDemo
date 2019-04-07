@@ -18,8 +18,8 @@ export interface AppState {
 }
 
 const initialState = {
-  formattedSpreadsheetData: null,
   formFieldValues: {},
+  formattedSpreadsheetData: null,
 };
 
 export default (state: AppState = initialState, action: Action): AppState => {
@@ -33,7 +33,10 @@ export default (state: AppState = initialState, action: Action): AppState => {
     case getType(setFormFieldValue):
       return {
         ...state,
-        formFieldValues: { ...state.formFieldValues, ...action.payload },
+        formFieldValues: {
+          ...state.formFieldValues,
+          [action.payload.field]: action.payload.value,
+        },
       };
     default:
       return state;

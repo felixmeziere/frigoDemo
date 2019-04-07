@@ -4,12 +4,11 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
-import { Welcome } from './Screens';
+import { Welcome } from './screens';
 
-interface Props {}
+interface IProps {}
 
 export const store = configureStore();
 

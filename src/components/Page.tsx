@@ -6,18 +6,20 @@
 import React, { ReactNode } from 'react';
 import { StyleProp } from 'react-native';
 import styled from 'styled-components/native';
+import { DARK_PAGE_BACKGROUND } from 'services';
 
-interface Props {
+interface IProps {
   children: ReactNode;
   style: StyleProp<{}>;
 }
 
 const PageContainer = styled.View`
-  margin-top: 40;
+  padding-top: 20;
   flex: 1;
-  padding-horizontal: 10;
+  padding-horizontal: 16;
+  background-color: ${DARK_PAGE_BACKGROUND};
 `;
 
-export default (props: Props) => (
+export default (props: IProps) => (
   <PageContainer style={props.style}>{props.children}</PageContainer>
 );
