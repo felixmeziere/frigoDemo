@@ -37,7 +37,7 @@ jobs:
             
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
-              sudo ./unpack_secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
+              sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
 
       - deploy:
@@ -112,7 +112,7 @@ jobs:
             
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
-              sudo ./unpack_secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
+              sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
 
       - run:
@@ -166,7 +166,7 @@ jobs:
             
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
-              sudo ./unpack_secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
+              sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
 
       - restore_cache:
