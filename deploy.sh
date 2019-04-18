@@ -30,9 +30,9 @@ warn(){
 check_environment(){
   CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
-  if [ "$CURRENT_BRANCH" != "$APP_ENV" ]
+  if [ "$CURRENT_BRANCH" != "$REPO_GIT_BRANCH" ]
   then
-    warn "Wrong branch, checkout $APP_ENV to deploy to $APP_ENV."
+    warn "Wrong branch, checkout $REPO_GIT_BRANCH to deploy to $REPO_GIT_BRANCH."
   else
     success "Deploying to $APP_ENV."
   fi
