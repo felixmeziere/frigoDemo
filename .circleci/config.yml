@@ -34,9 +34,12 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-            if [ "${CIRCLE_BRANCH}" == "staging" ];
+            if [ "${CIRCLE_BRANCH}" == "master" ];
             then
-              sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
+              sudo yarn unpack-secrets -e production -p ${PRODUCTION_SECRETS_PASSPHRASE}
+            elif [ "${CIRCLE_BRANCH}" == "staging" ];
+            then
+              sudo yarn unpack-secrets -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
 
       - restore_cache:
@@ -48,14 +51,17 @@ jobs:
           name: Deploy with CodePush
           command: |
             cd ./
-            if [ "${CIRCLE_BRANCH}" == "staging" ];
+            if [ "${CIRCLE_BRANCH}" == "master" ]|| [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
               source $BASH_ENV
               yarn global add appcenter-cli
               appcenter login --token ${FL_APPCENTER_API_TOKEN} --quiet
             fi
-            if [ "${CIRCLE_BRANCH}" == "staging" ];
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+            then
+              yarn deploy -t soft -e production
+            elif [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t soft -e staging
             fi
@@ -103,9 +109,12 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-            if [ "${CIRCLE_BRANCH}" == "staging" ];
+            if [ "${CIRCLE_BRANCH}" == "master" ];
             then
-              sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
+              sudo yarn unpack-secrets -e production -p ${PRODUCTION_SECRETS_PASSPHRASE}
+            elif [ "${CIRCLE_BRANCH}" == "staging" ];
+            then
+              sudo yarn unpack-secrets -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
 
       - run: cd ./ && bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
@@ -120,7 +129,10 @@ jobs:
           name: Build, Sign & Deploy
           command: |
             cd ./
-            if [ "${CIRCLE_BRANCH}" == "staging" ];
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+            then
+              yarn deploy -t hard -o android -e production
+            elif [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o android -e staging
             fi
@@ -157,9 +169,12 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-            if [ "${CIRCLE_BRANCH}" == "staging" ];
+            if [ "${CIRCLE_BRANCH}" == "master" ];
             then
-              sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
+              sudo yarn unpack-secrets -e production -p ${PRODUCTION_SECRETS_PASSPHRASE}
+            elif [ "${CIRCLE_BRANCH}" == "staging" ];
+            then
+              sudo yarn unpack-secrets -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
 
       - restore_cache:
@@ -204,7 +219,10 @@ jobs:
           command: |
             cd ./
             sudo xcode-select -s /Applications/Xcode-10.1.app
-            if [ "${CIRCLE_BRANCH}" == "staging" ];
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+            then
+              yarn deploy -t hard -o ios -e production
+            elif [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o ios -e staging
             fi
@@ -220,6 +238,7 @@ workflows:
           filters:
             branches:
               only: 
+                - master
                 - staging
       - android:
           requires:
@@ -227,4 +246,5 @@ workflows:
           filters:
             branches:
               only: 
+                - master
                 - staging
