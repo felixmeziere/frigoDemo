@@ -32,7 +32,7 @@ check_environment(){
 
   if [ "$CURRENT_BRANCH" != "$REPO_GIT_BRANCH" ]
   then
-    warn "Wrong branch, checkout $REPO_GIT_BRANCH to deploy to $REPO_GIT_BRANCH."
+    warn "Wrong branch, checkout $REPO_GIT_BRANCH to deploy to $APP_ENV."
   else
     success "Deploying to $APP_ENV."
   fi
