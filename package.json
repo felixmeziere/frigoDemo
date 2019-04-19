@@ -6,8 +6,10 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --passWithNoTests",
     "lint": "eslint .",
-    "deploy": "./deploy.sh",
-    "postinstall": "rndebugger-open"
+    "postinstall": "rndebugger-open",
+    "pack-secrets": "./secrets-scripts/pack-secrets.sh",
+    "unpack-secrets": "./secrets-scripts/unpack-secrets.sh",
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "@types/react-redux": "^7.0.6",

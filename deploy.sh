@@ -64,6 +64,8 @@ if [ $DEPLOY_TYPE == "hard" ]; then
   echo -e "${BLUE}* * * * *"
   echo -e "👷  Hard-Deploy"
   echo -e "* * * * *${NO_COLOR}"
+  bundle exec fastlane set_build_numbers_to_current_timestamp
+
   if [[ $APP_OS != "android" ]]; then
     echo -e "${GREEN}- - - - -"
     echo -e "Fastlane 🍎  iOS $APP_ENV"
