@@ -34,30 +34,41 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-            
+
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
 
+      - restore_cache:
+          key: bundle-v1-{{ checksum "./Gemfile.lock" }}-{{ arch }}
+
+      - run: cd ./ && bundle install
+
       - deploy:
           name: Deploy with CodePush
           command: |
             cd ./
-            
+
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               
-            echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
-            source $BASH_ENV
-            yarn global add appcenter-cli
-            appcenter login --token ${FL_APPCENTER_API_TOKEN} --quiet
+              echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
+              source $BASH_ENV
+              yarn global add appcenter-cli
+              appcenter login --token ${FL_APPCENTER_API_TOKEN} --quiet
             fi
-            
+
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t soft -e staging
             fi
+
+      - save_cache:
+          key: bundle-v1-{{ checksum "./Gemfile.lock" }}-{{ arch }}
+          paths:
+            - ./vendor/bundle
+            - /Users/distiller/.gem/ruby/2.4.5/
 
       - save_cache:
           key: yarn-v1-{{ checksum "./yarn.lock" }}-{{ arch }}
@@ -73,6 +84,12 @@ jobs:
           root: ~/frigoDemo
           paths:
             - ./node_modules
+            - ./vendor/bundle
+
+      - persist_to_workspace:
+          root: /
+          paths:
+            - Users/distiller/.gem/ruby/2.4.5/
 
       - store_test_results:
           path: ./test-results
@@ -94,22 +111,16 @@ jobs:
       - attach_workspace:
           at: ~/frigoDemo
 
-      - restore_cache:
-          key: bundle-v1-{{ checksum "./Gemfile.lock" }}-{{ arch }}
+      - attach_workspace:
+          at: /
 
       - run: cd ./ && bundle install
-
-      - save_cache:
-          key: bundle-v1-{{ checksum "./Gemfile.lock" }}-{{ arch }}
-          paths:
-            - vendor/bundle
-            - /Users/distiller/.gem/ruby/2.4.5/
 
       - run:
           name: Unpack secrets
           command: |
             cd ./
-            
+
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
@@ -125,7 +136,7 @@ jobs:
           name: Build, Sign & Deploy
           command: |
             cd ./
-            
+
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o android -e staging
@@ -163,7 +174,7 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-            
+
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
@@ -211,7 +222,7 @@ jobs:
           command: |
             cd ./
             sudo xcode-select -s /Applications/Xcode-10.1.app
-            
+
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o ios -e staging
@@ -227,12 +238,12 @@ workflows:
             - node
           filters:
             branches:
-              only: 
+              only:
                 - staging
       - android:
           requires:
             - node
           filters:
             branches:
-              only: 
+              only:
                 - staging
