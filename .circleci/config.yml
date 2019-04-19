@@ -5,7 +5,7 @@ jobs:
   node:
     working_directory: ~/frigoDemo
     docker:
-      - image: circleci/node:8
+      - image: circleci/android:api-28-node
     steps:
       - checkout
 
@@ -47,7 +47,7 @@ jobs:
             
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
-            
+              
             echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
             source $BASH_ENV
             yarn global add appcenter-cli
