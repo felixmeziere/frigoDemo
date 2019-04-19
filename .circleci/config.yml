@@ -89,7 +89,7 @@ jobs:
       - persist_to_workspace:
           root: /
           paths:
-            - Users/distiller/.gem/ruby/2.4.5/
+            - /Users/distiller/.gem/ruby/2.4.5/
 
       - store_test_results:
           path: ./test-results
