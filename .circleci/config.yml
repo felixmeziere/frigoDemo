@@ -34,7 +34,7 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
@@ -44,16 +44,16 @@ jobs:
           name: Deploy with CodePush
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
-
+            
             echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
             source $BASH_ENV
             yarn global add appcenter-cli
             appcenter login --token ${FL_APPCENTER_API_TOKEN} --quiet
             fi
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t soft -e staging
@@ -109,7 +109,7 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
@@ -125,7 +125,7 @@ jobs:
           name: Build, Sign & Deploy
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o android -e staging
@@ -163,7 +163,7 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
@@ -211,7 +211,7 @@ jobs:
           command: |
             cd ./
             sudo xcode-select -s /Applications/Xcode-10.1.app
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o ios -e staging
@@ -227,12 +227,12 @@ workflows:
             - node
           filters:
             branches:
-              only:
+              only: 
                 - staging
       - android:
           requires:
             - node
           filters:
             branches:
-              only:
+              only: 
                 - staging
