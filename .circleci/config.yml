@@ -34,7 +34,7 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
@@ -49,7 +49,7 @@ jobs:
           name: Deploy with CodePush
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               
@@ -58,7 +58,7 @@ jobs:
               yarn global add appcenter-cli
               appcenter login --token ${FL_APPCENTER_API_TOKEN} --quiet
             fi
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t soft -e staging
@@ -86,11 +86,6 @@ jobs:
             - ./node_modules
             - ./vendor/bundle
 
-      - persist_to_workspace:
-          root: /
-          paths:
-            - Users/distiller/.gem/ruby/2.4.5/
-
       - store_test_results:
           path: ./test-results
 
@@ -111,20 +106,17 @@ jobs:
       - attach_workspace:
           at: ~/frigoDemo
 
-      - attach_workspace:
-          at: /
-
-      - run: cd ./ && bundle install
-
       - run:
           name: Unpack secrets
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
             fi
+
+      - run: cd ./ && bundle install
 
       - run:
           name: yarn install
@@ -136,7 +128,7 @@ jobs:
           name: Build, Sign & Deploy
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o android -e staging
@@ -174,7 +166,7 @@ jobs:
           name: Unpack secrets
           command: |
             cd ./
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               sudo ./secrets-scripts/unpack-secrets.sh -e staging -p ${STAGING_SECRETS_PASSPHRASE}
@@ -222,7 +214,7 @@ jobs:
           command: |
             cd ./
             sudo xcode-select -s /Applications/Xcode-10.1.app
-
+            
             if [ "${CIRCLE_BRANCH}" == "staging" ];
             then
               yarn deploy -t hard -o ios -e staging
@@ -238,12 +230,12 @@ workflows:
             - node
           filters:
             branches:
-              only:
+              only: 
                 - staging
       - android:
           requires:
             - node
           filters:
             branches:
-              only:
+              only: 
                 - staging
