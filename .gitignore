@@ -64,3 +64,5 @@ fastlane/.env.*.secret
 # Jest
 #
 .jest/
+.bundle
+vendor/bundle
