@@ -11,4 +11,5 @@ target 'frigoDemo' do
   # Pods for frigoDemo
 
   
+  platform :ios, '9.0'
 end
