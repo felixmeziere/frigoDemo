@@ -20,6 +20,11 @@ or alternatively using `brew cask install fastlane`
 fastlane check_git_status
 ```
 
+### set_build_numbers_to_current_timestamp
+```
+fastlane set_build_numbers_to_current_timestamp
+```
+
 ### set_js_env
 ```
 fastlane set_js_env
@@ -54,9 +59,14 @@ fastlane ios build
 fastlane ios deploy_hockey
 ```
 
-### ios deploy_appCenter
+### ios deploy_to_appcenter
 ```
-fastlane ios deploy_appCenter
+fastlane ios deploy_to_appcenter
+```
+
+### ios deploy_to_testflight
+```
+fastlane ios deploy_to_testflight
 ```
 
 ### ios deploy
@@ -98,9 +108,14 @@ fastlane android build
 fastlane android deploy_hockey
 ```
 
-### android deploy_appCenter
+### android deploy_to_appcenter
 ```
-fastlane android deploy_appCenter
+fastlane android deploy_to_appcenter
+```
+
+### android deploy_to_playstore
+```
+fastlane android deploy_to_playstore
 ```
 
 ### android deploy
