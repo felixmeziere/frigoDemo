@@ -29,7 +29,7 @@ source fastlane/.env.${APP_ENV}
 FILE_ROOT="${APP_ENV}_app_secrets_with_paths"
 
 # Select files to put in the archive
-SECRETS_TO_PACK="fastlane/.env.${APP_ENV}.secret android/app/${GRADLE_KEYSTORE}"
+SECRETS_TO_PACK="fastlane/.env.${APP_ENV}.secret android/app/${GRADLE_KEYSTORE} android/api-6537532324740365526-419417-8694224d085c.json"
 
 # Create archive
 tar -cvzf $FILE_ROOT.tar.gz $SECRETS_TO_PACK

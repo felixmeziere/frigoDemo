@@ -29,10 +29,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		210B940D463933EF063861E74E1D764F /* Pods-frigoDemo-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D361998BC17CAB67DA58E16F91EBEF /* Pods-frigoDemo-tvOS-dummy.m */; };
-		AEA502468C650BB0F7EDD63DE7982387 /* Pods-frigoDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36907E5048756550DD991F69C4624298 /* Pods-frigoDemoTests-dummy.m */; };
-		C2C632E0C094E7FF26CF20A6E6407DEE /* Pods-frigoDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB42B4C29C2A7B0F97DE0F5DAF7416A2 /* Pods-frigoDemo-dummy.m */; };
-		C52F17362D94FE568F2BA74C041A2981 /* Pods-frigoDemo-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEC27F4E7989B8EC1545ED430AA544 /* Pods-frigoDemo-tvOSTests-dummy.m */; };
+		C2C632E0C094E7FF26CF20A6E6407DEE /* Pods-frigoDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B8C5F3A854F7CA9B8ECDE3BA83444D /* Pods-frigoDemo-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,20 +39,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = ED8B76EC90CA1D894B6D38663D04C292;
 			remoteInfo = AppCenterReactNativeShared;
-		};
-		4BDA6FFAA7EFDD0702F8EB2596CD8A62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E6076A5F67644C205735487FC3927EAF;
-			remoteInfo = "Pods-frigoDemo";
-		};
-		B8564CFEBF9C717D6F7867D8FDC37B5F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 462CC867DE28C89F2B1B99ADFAF7C579;
-			remoteInfo = "Pods-frigoDemo-tvOS";
 		};
 		C83A459260A0AD0E29F45F34D6D72FFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -74,61 +57,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F625AD81D6AC99D66203F5BB33126B7 /* Pods-frigoDemo-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-frigoDemo-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		08B8C5F3A854F7CA9B8ECDE3BA83444D /* Pods-frigoDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-frigoDemo-dummy.m"; sourceTree = "<group>"; };
+		0B6F7396A984AE5BC387F71BCFBF3ED7 /* libPods-frigoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-frigoDemo.a"; path = "libPods-frigoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		101086D48961A1F5D174F74008C809D8 /* AppCenterReactNativeShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterReactNativeShared.framework; path = AppCenterReactNativeShared/AppCenterReactNativeShared.framework; sourceTree = "<group>"; };
 		259A51087349695F5B93EE5070F4CE70 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
-		28655B209CD4A738236B49AE02FAC2D1 /* Pods-frigoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo.release.xcconfig"; sourceTree = "<group>"; };
-		2E08371FDD3279527A80A3CD4A0B1968 /* Pods-frigoDemo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		35824D192341C7C2399D3821630B7E13 /* Pods-frigoDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-frigoDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		36907E5048756550DD991F69C4624298 /* Pods-frigoDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-frigoDemoTests-dummy.m"; sourceTree = "<group>"; };
-		3A479E8761E2F5AA336CA1414E2FF4AA /* Pods-frigoDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3D22C6B491054C80FF92B695F86BF7F1 /* libPods-frigoDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-frigoDemoTests.a"; path = "libPods-frigoDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		493188AD456025977C41D7589F141AD3 /* Pods-frigoDemo-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-frigoDemo-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4B548ECAA1C963D740A10472094F9D55 /* Pods-frigoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		4ECEC27F4E7989B8EC1545ED430AA544 /* Pods-frigoDemo-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-frigoDemo-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		4046E1DAC6F9314B4095DDB2B25FE023 /* Pods-frigoDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-frigoDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		57447041E60F2B2A34B159A833C2254C /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework"; sourceTree = "<group>"; };
 		59CE2BED226D8BACCDFB3EEC78580EC1 /* AppCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppCenter.xcconfig; sourceTree = "<group>"; };
-		77C24737B30608882280ED2D2012B061 /* Pods-frigoDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-frigoDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		80AF24CE182769F2A0508EC8F51584EB /* Pods-frigoDemo-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8566143832ED33F27502AE4C77094401 /* Pods-frigoDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-frigoDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		88D361998BC17CAB67DA58E16F91EBEF /* Pods-frigoDemo-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-frigoDemo-tvOS-dummy.m"; sourceTree = "<group>"; };
-		8B6D1B30D81ACF7B2D3691F2FE70CA2C /* libPods-frigoDemo-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-frigoDemo-tvOSTests.a"; path = "libPods-frigoDemo-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EF1D8BEC4DFAF74A7C06BE681DA2031 /* Pods-frigoDemo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		9813D5DA5BACFF8F79B637F715502C2C /* Pods-frigoDemo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B2ADDE599C944BD247B81FBB88BC03DC /* Pods-frigoDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		A631EAFE092F5B5FE2085BE8F703134B /* Pods-frigoDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-frigoDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		AFB9BA4B27BD10DD0C81682212F1DD63 /* Pods-frigoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B949CDF652086A792464DA9B3CE2C9FA /* AppCenterReactNativeShared.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppCenterReactNativeShared.xcconfig; sourceTree = "<group>"; };
-		C8E6F03F929706CC0E28A128BFE2BCAA /* Pods-frigoDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-frigoDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		CE55A86955A5713744622D9C6BF10415 /* libPods-frigoDemo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-frigoDemo-tvOS.a"; path = "libPods-frigoDemo-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D20920C7FDC55C393EC81C87A9C64D16 /* libPods-frigoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-frigoDemo.a"; path = "libPods-frigoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB42B4C29C2A7B0F97DE0F5DAF7416A2 /* Pods-frigoDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-frigoDemo-dummy.m"; sourceTree = "<group>"; };
-		E0E8CA06FCD1DC45C70495195BF0D317 /* Pods-frigoDemo-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-frigoDemo-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E58CBA631D7D2BF8B7DC71F6689BB019 /* Pods-frigoDemo-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-frigoDemo-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D843FA5F598F517E43745CE49B991CFC /* Pods-frigoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-frigoDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F4CE7345C6137AF49A54827B4AEA2E17 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		28CA38A5EF7D8609F482063D8A8FA868 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B0397CBE4BFAF8EF12787673985E873 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA9AD1803856D93083801759CEF5A76C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DCC7376ACD64BAC78EAB71063C9653AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,19 +109,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		30E2A5E5A0FDF31B374B0A58762DAD30 /* Pods-frigoDemo-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				493188AD456025977C41D7589F141AD3 /* Pods-frigoDemo-tvOS-acknowledgements.markdown */,
-				0F625AD81D6AC99D66203F5BB33126B7 /* Pods-frigoDemo-tvOS-acknowledgements.plist */,
-				88D361998BC17CAB67DA58E16F91EBEF /* Pods-frigoDemo-tvOS-dummy.m */,
-				8EF1D8BEC4DFAF74A7C06BE681DA2031 /* Pods-frigoDemo-tvOS.debug.xcconfig */,
-				9813D5DA5BACFF8F79B637F715502C2C /* Pods-frigoDemo-tvOS.release.xcconfig */,
-			);
-			name = "Pods-frigoDemo-tvOS";
-			path = "Target Support Files/Pods-frigoDemo-tvOS";
-			sourceTree = "<group>";
-		};
 		5D0D3521F21C1BB5DCE82B8CAEF9692B /* AppCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,25 +129,20 @@
 			name = Analytics;
 			sourceTree = "<group>";
 		};
-		7C1F3946F6E5814A3861311B17D4D119 /* Pods-frigoDemo-tvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				E0E8CA06FCD1DC45C70495195BF0D317 /* Pods-frigoDemo-tvOSTests-acknowledgements.markdown */,
-				E58CBA631D7D2BF8B7DC71F6689BB019 /* Pods-frigoDemo-tvOSTests-acknowledgements.plist */,
-				4ECEC27F4E7989B8EC1545ED430AA544 /* Pods-frigoDemo-tvOSTests-dummy.m */,
-				80AF24CE182769F2A0508EC8F51584EB /* Pods-frigoDemo-tvOSTests.debug.xcconfig */,
-				2E08371FDD3279527A80A3CD4A0B1968 /* Pods-frigoDemo-tvOSTests.release.xcconfig */,
-			);
-			name = "Pods-frigoDemo-tvOSTests";
-			path = "Target Support Files/Pods-frigoDemo-tvOSTests";
-			sourceTree = "<group>";
-		};
 		94182EE150168D8F091F83224D20C0A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				23977631E0E947775B0FF421D89FC310 /* Frameworks */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		95EB7DF4BCAC893940EBFE35CB2EC898 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B6F7396A984AE5BC387F71BCFBF3ED7 /* libPods-frigoDemo.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9B7151692B2AC286B115FA8800335CA1 /* Crashes */ = {
@@ -227,14 +153,14 @@
 			name = Crashes;
 			sourceTree = "<group>";
 		};
-		B7C01E16658A1F1C5930CBFD1961D090 /* Pods-frigoDemo */ = {
+		A055B14EA8912F5BC01DD20ACFE90233 /* Pods-frigoDemo */ = {
 			isa = PBXGroup;
 			children = (
-				77C24737B30608882280ED2D2012B061 /* Pods-frigoDemo-acknowledgements.markdown */,
-				C8E6F03F929706CC0E28A128BFE2BCAA /* Pods-frigoDemo-acknowledgements.plist */,
-				DB42B4C29C2A7B0F97DE0F5DAF7416A2 /* Pods-frigoDemo-dummy.m */,
-				4B548ECAA1C963D740A10472094F9D55 /* Pods-frigoDemo.debug.xcconfig */,
-				28655B209CD4A738236B49AE02FAC2D1 /* Pods-frigoDemo.release.xcconfig */,
+				4046E1DAC6F9314B4095DDB2B25FE023 /* Pods-frigoDemo-acknowledgements.markdown */,
+				A631EAFE092F5B5FE2085BE8F703134B /* Pods-frigoDemo-acknowledgements.plist */,
+				08B8C5F3A854F7CA9B8ECDE3BA83444D /* Pods-frigoDemo-dummy.m */,
+				D843FA5F598F517E43745CE49B991CFC /* Pods-frigoDemo.debug.xcconfig */,
+				AFB9BA4B27BD10DD0C81682212F1DD63 /* Pods-frigoDemo.release.xcconfig */,
 			);
 			name = "Pods-frigoDemo";
 			path = "Target Support Files/Pods-frigoDemo";
@@ -257,26 +183,23 @@
 			path = "../Target Support Files/AppCenterReactNativeShared";
 			sourceTree = "<group>";
 		};
+		CDE6123C2989BB895C3F5A0DBA914890 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A055B14EA8912F5BC01DD20ACFE90233 /* Pods-frigoDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				EE373CD21EE89767163B4F9D8A04C324 /* Pods */,
-				E9E30A3E61E1C5E4DDF04BCD8706442A /* Products */,
-				D31FDFDD31533ECC81A3CDFFA931439F /* Targets Support Files */,
+				95EB7DF4BCAC893940EBFE35CB2EC898 /* Products */,
+				CDE6123C2989BB895C3F5A0DBA914890 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D31FDFDD31533ECC81A3CDFFA931439F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B7C01E16658A1F1C5930CBFD1961D090 /* Pods-frigoDemo */,
-				30E2A5E5A0FDF31B374B0A58762DAD30 /* Pods-frigoDemo-tvOS */,
-				7C1F3946F6E5814A3861311B17D4D119 /* Pods-frigoDemo-tvOSTests */,
-				FBA937A036B1B49AE0F317DD42E23F9C /* Pods-frigoDemoTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		D7E2631FD0126E1F8A2EF339F5A433A9 /* Support Files */ = {
@@ -293,17 +216,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E9E30A3E61E1C5E4DDF04BCD8706442A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D20920C7FDC55C393EC81C87A9C64D16 /* libPods-frigoDemo.a */,
-				CE55A86955A5713744622D9C6BF10415 /* libPods-frigoDemo-tvOS.a */,
-				8B6D1B30D81ACF7B2D3691F2FE70CA2C /* libPods-frigoDemo-tvOSTests.a */,
-				3D22C6B491054C80FF92B695F86BF7F1 /* libPods-frigoDemoTests.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		ED7F0E7602AAB87E8282D7EE77A128F2 /* Frameworks */ = {
@@ -323,44 +235,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FBA937A036B1B49AE0F317DD42E23F9C /* Pods-frigoDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				8566143832ED33F27502AE4C77094401 /* Pods-frigoDemoTests-acknowledgements.markdown */,
-				35824D192341C7C2399D3821630B7E13 /* Pods-frigoDemoTests-acknowledgements.plist */,
-				36907E5048756550DD991F69C4624298 /* Pods-frigoDemoTests-dummy.m */,
-				3A479E8761E2F5AA336CA1414E2FF4AA /* Pods-frigoDemoTests.debug.xcconfig */,
-				B2ADDE599C944BD247B81FBB88BC03DC /* Pods-frigoDemoTests.release.xcconfig */,
-			);
-			name = "Pods-frigoDemoTests";
-			path = "Target Support Files/Pods-frigoDemoTests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		52BE714CBDA9D2C231F4DC182E7057BD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		670869CF6C3D05FB4A8A2745DD5A6D9B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BA73F5CFE6855FA6F1E5762FBF69FC17 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF9F814B1A6B2AE04A034C3F69A4D2DC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,59 +248,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		462CC867DE28C89F2B1B99ADFAF7C579 /* Pods-frigoDemo-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1A2E662E56D268EF04F441737BC0EC1 /* Build configuration list for PBXNativeTarget "Pods-frigoDemo-tvOS" */;
-			buildPhases = (
-				670869CF6C3D05FB4A8A2745DD5A6D9B /* Headers */,
-				031B244EA4B5EB164D236BC1934A9ED6 /* Sources */,
-				CA9AD1803856D93083801759CEF5A76C /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-frigoDemo-tvOS";
-			productName = "Pods-frigoDemo-tvOS";
-			productReference = CE55A86955A5713744622D9C6BF10415 /* libPods-frigoDemo-tvOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		6E2C8F50063D011386A9E3A60B0C831A /* Pods-frigoDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 34D2438F1D248782AFC2C890E85F11F0 /* Build configuration list for PBXNativeTarget "Pods-frigoDemoTests" */;
-			buildPhases = (
-				52BE714CBDA9D2C231F4DC182E7057BD /* Headers */,
-				A822DC80DCBC81270DB49BA33D130B3D /* Sources */,
-				28CA38A5EF7D8609F482063D8A8FA868 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DC86B2920AFADD16255A0648ED78B4E0 /* PBXTargetDependency */,
-			);
-			name = "Pods-frigoDemoTests";
-			productName = "Pods-frigoDemoTests";
-			productReference = 3D22C6B491054C80FF92B695F86BF7F1 /* libPods-frigoDemoTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A935A0BCC9262B8794F4C4FDFDC882A3 /* Pods-frigoDemo-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2AC5C66012E31ADB02C89B5C105592E0 /* Build configuration list for PBXNativeTarget "Pods-frigoDemo-tvOSTests" */;
-			buildPhases = (
-				EF9F814B1A6B2AE04A034C3F69A4D2DC /* Headers */,
-				62778FAE559C16BBBB12B47F8269A713 /* Sources */,
-				8B0397CBE4BFAF8EF12787673985E873 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6F006F40322BBBD47EDAE8B3931B2D21 /* PBXTargetDependency */,
-			);
-			name = "Pods-frigoDemo-tvOSTests";
-			productName = "Pods-frigoDemo-tvOSTests";
-			productReference = 8B6D1B30D81ACF7B2D3691F2FE70CA2C /* libPods-frigoDemo-tvOSTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		E6076A5F67644C205735487FC3927EAF /* Pods-frigoDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B52C32173B25C756408AF9DFFD5470D9 /* Build configuration list for PBXNativeTarget "Pods-frigoDemo" */;
@@ -439,7 +264,7 @@
 			);
 			name = "Pods-frigoDemo";
 			productName = "Pods-frigoDemo";
-			productReference = D20920C7FDC55C393EC81C87A9C64D16 /* libPods-frigoDemo.a */;
+			productReference = 0B6F7396A984AE5BC387F71BCFBF3ED7 /* libPods-frigoDemo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -459,45 +284,18 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = E9E30A3E61E1C5E4DDF04BCD8706442A /* Products */;
+			productRefGroup = 95EB7DF4BCAC893940EBFE35CB2EC898 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				397BBDFEBE9CC818487FA8ABB7623A33 /* AppCenter */,
 				ED8B76EC90CA1D894B6D38663D04C292 /* AppCenterReactNativeShared */,
 				E6076A5F67644C205735487FC3927EAF /* Pods-frigoDemo */,
-				462CC867DE28C89F2B1B99ADFAF7C579 /* Pods-frigoDemo-tvOS */,
-				A935A0BCC9262B8794F4C4FDFDC882A3 /* Pods-frigoDemo-tvOSTests */,
-				6E2C8F50063D011386A9E3A60B0C831A /* Pods-frigoDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		031B244EA4B5EB164D236BC1934A9ED6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				210B940D463933EF063861E74E1D764F /* Pods-frigoDemo-tvOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		62778FAE559C16BBBB12B47F8269A713 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C52F17362D94FE568F2BA74C041A2981 /* Pods-frigoDemo-tvOSTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A822DC80DCBC81270DB49BA33D130B3D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEA502468C650BB0F7EDD63DE7982387 /* Pods-frigoDemoTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EEF19C07078546FBBF25567BE5EB047F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,195 +319,16 @@
 			target = ED8B76EC90CA1D894B6D38663D04C292 /* AppCenterReactNativeShared */;
 			targetProxy = 3AFC2590C57A7AA0A909DD37779EF583 /* PBXContainerItemProxy */;
 		};
-		6F006F40322BBBD47EDAE8B3931B2D21 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-frigoDemo-tvOS";
-			target = 462CC867DE28C89F2B1B99ADFAF7C579 /* Pods-frigoDemo-tvOS */;
-			targetProxy = B8564CFEBF9C717D6F7867D8FDC37B5F /* PBXContainerItemProxy */;
-		};
 		797DDF5AE08EB697BE0C91928894CFB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppCenter;
 			target = 397BBDFEBE9CC818487FA8ABB7623A33 /* AppCenter */;
 			targetProxy = C83A459260A0AD0E29F45F34D6D72FFF /* PBXContainerItemProxy */;
 		};
-		DC86B2920AFADD16255A0648ED78B4E0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-frigoDemo";
-			target = E6076A5F67644C205735487FC3927EAF /* Pods-frigoDemo */;
-			targetProxy = 4BDA6FFAA7EFDD0702F8EB2596CD8A62 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		44DA8D30A185CF39FF38CACD51676CDD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B949CDF652086A792464DA9B3CE2C9FA /* AppCenterReactNativeShared.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4D0269EF005331D240811AA421607EF3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2ADDE599C944BD247B81FBB88BC03DC /* Pods-frigoDemoTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		6102AAACF1F680356B7D3FAF0632D673 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-			};
-			name = Release;
-		};
-		6F4D25CB9F599D775DBC451590213731 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59CE2BED226D8BACCDFB3EEC78580EC1 /* AppCenter.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		77D9569C038F7ED7C334C59D4CC704EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28655B209CD4A738236B49AE02FAC2D1 /* Pods-frigoDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8A791558A6CAD52F6A29BE7CDFC70C4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59CE2BED226D8BACCDFB3EEC78580EC1 /* AppCenter.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8B1506E5DF8478C84288F0A926370A3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E08371FDD3279527A80A3CD4A0B1968 /* Pods-frigoDemo-tvOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8BBA25EDDDAEDE7FFB8870004DC7E4C0 /* Debug */ = {
+		07488D4657FB0A78086563621D425F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -770,13 +389,39 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
 		};
-		9B73658CC4011027402AF18EB8B0FDA5 /* Debug */ = {
+		44DA8D30A185CF39FF38CACD51676CDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A479E8761E2F5AA336CA1414E2FF4AA /* Pods-frigoDemoTests.debug.xcconfig */;
+			baseConfigurationReference = B949CDF652086A792464DA9B3CE2C9FA /* AppCenterReactNativeShared.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F4D25CB9F599D775DBC451590213731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59CE2BED226D8BACCDFB3EEC78580EC1 /* AppCenter.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77D9569C038F7ED7C334C59D4CC704EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFB9BA4B27BD10DD0C81682212F1DD63 /* Pods-frigoDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -792,28 +437,83 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		B9C8C2E30328A57E2D35DC1E85F69655 /* Debug */ = {
+		8A791558A6CAD52F6A29BE7CDFC70C4B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EF1D8BEC4DFAF74A7C06BE681DA2031 /* Pods-frigoDemo-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 59CE2BED226D8BACCDFB3EEC78580EC1 /* AppCenter.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		A1962E6FF39BBAC201A2E5DDF99557DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
 		};
 		C4939254D9B12C5F8E84CFE6C51D11AE /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -830,7 +530,7 @@
 		};
 		D1CB62BF0646B3C3572DBFB260DE14EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B548ECAA1C963D740A10472094F9D55 /* Pods-frigoDemo.debug.xcconfig */;
+			baseConfigurationReference = D843FA5F598F517E43745CE49B991CFC /* Pods-frigoDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -849,73 +549,14 @@
 			};
 			name = Debug;
 		};
-		EAA2BCF658474F214AABC857D195C1ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80AF24CE182769F2A0508EC8F51584EB /* Pods-frigoDemo-tvOSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-			};
-			name = Debug;
-		};
-		FE9619CF11B5D5A1570C9FBDBFE3B441 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9813D5DA5BACFF8F79B637F715502C2C /* Pods-frigoDemo-tvOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2AC5C66012E31ADB02C89B5C105592E0 /* Build configuration list for PBXNativeTarget "Pods-frigoDemo-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAA2BCF658474F214AABC857D195C1ED /* Debug */,
-				8B1506E5DF8478C84288F0A926370A3C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		34D2438F1D248782AFC2C890E85F11F0 /* Build configuration list for PBXNativeTarget "Pods-frigoDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9B73658CC4011027402AF18EB8B0FDA5 /* Debug */,
-				4D0269EF005331D240811AA421607EF3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BBA25EDDDAEDE7FFB8870004DC7E4C0 /* Debug */,
-				6102AAACF1F680356B7D3FAF0632D673 /* Release */,
+				07488D4657FB0A78086563621D425F8A /* Debug */,
+				A1962E6FF39BBAC201A2E5DDF99557DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -943,15 +584,6 @@
 			buildConfigurations = (
 				6F4D25CB9F599D775DBC451590213731 /* Debug */,
 				8A791558A6CAD52F6A29BE7CDFC70C4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D1A2E662E56D268EF04F441737BC0EC1 /* Build configuration list for PBXNativeTarget "Pods-frigoDemo-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9C8C2E30328A57E2D35DC1E85F69655 /* Debug */,
-				FE9619CF11B5D5A1570C9FBDBFE3B441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

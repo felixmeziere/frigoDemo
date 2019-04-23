@@ -66,3 +66,4 @@ fastlane/.env.*.secret
 .jest/
 .bundle
 vendor/bundle
+android/api-6537532324740365526-419417-8694224d085c.json
